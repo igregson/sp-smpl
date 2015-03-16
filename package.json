@@ -1,11 +1,12 @@
 {
-  "name": "cv-lo",
+  "name": "sp-smpl",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple starting point that uses NPM as a build tool.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css:build": "scss-cli --output-style compressed assets-src/sass/**/* -o assets/",
+    "css:build": "scss-cli --output-style compressed assets-src/sass/main.scss -o assets/",
+    "postcss:build": "autoprefixer -b 'last 2 versions' assets/*.css",
     "css:watch": "onchange 'assets-src/sass/**/*' -- npm run css:build",
     "browserSync": "browser-sync start --files 'assets/*, *.html' --server --logLevel 'info' --no-open --no-notify",
     "start": "parallelshell 'npm run css:watch' 'npm run browserSync'"
