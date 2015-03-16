@@ -1,0 +1,22 @@
+{
+  "name": "cv-lo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:build": "scss-cli --output-style compressed assets-src/sass/**/* -o assets/",
+    "css:watch": "onchange 'assets-src/sass/**/*' -- npm run css:build",
+    "browserSync": "browser-sync start --files 'assets/*, *.html' --server --logLevel 'info' --no-open --no-notify",
+    "start": "parallelshell 'npm run css:watch' 'npm run browserSync'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^5.1.0",
+    "browser-sync": "^2.2.4",
+    "onchange": "^1.0.0",
+    "parallelshell": "^1.1.1",
+    "scss-cli": "0.0.5"
+  }
+}
