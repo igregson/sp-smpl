@@ -3,14 +3,9 @@
 
 ## SP-SMPL
 
-A simple **s**tarting **p**oint that uses NPM as a build tool to build Sass styles and do seemingly-magical multi-browser watching and syncing via BrowserSync.
+A simple **s**tarting **p**oint for project starts. Uses NPM as a build tool and harnesses Harp.js for serving directly from Jade in development and easily compiling to a static build for deployment. Currently setup to use Stylus for styles (with a custom build process outside of Harp) and BrowserSync for powerful watching and syncing (that "just works" and works well).
 
 ## Usage
 
 - `npm install`
-- add a subdirectory to the the `assets-src` directory named `Sass`. Place styles there.
-- `npm watch`
-
-## More to Come
-
-stay tuned :)
+- `npm run watch`
